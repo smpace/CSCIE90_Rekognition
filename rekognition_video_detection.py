@@ -318,9 +318,12 @@ def usage_demo():
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
+    bucket_name = "put-name-here"
+    video_name = "put-name-here.mp4"
+
     s3_resource = boto3.resource('s3')
-    bucket = s3_resource.Bucket('final-upload-video')
-    video_object = bucket.Object('kingsday.mp4')
+    bucket = s3_resource.Bucket(bucket_name)
+    video_object = bucket.Object(video_name)
 
     rekognition_client = boto3.client('rekognition')
     video = RekognitionVideo.from_bucket(video_object, rekognition_client)
