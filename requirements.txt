@@ -1,0 +1,4 @@
+Boto3=1.14.47
+Requests=2.23.0
+Pillow=7.2.0
+PyTest=5.3.5
